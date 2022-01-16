@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/weather-card.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="img"></div>
+    </div>
+
+    <script>
+        const url = 'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-FA20DEE2-695A-48AC-9B77-AF6FF43745C9';
+        const countries = ['臺北市', '新北市', '基隆市', '宜蘭縣', '桃園市', '新竹縣', '新竹市', '苗栗縣', '臺中市', '彰化縣', '南投縣', '雲林縣', '嘉義縣', '嘉義市', '臺南市', '高雄市', '屏東縣', '花蓮縣', '臺東縣', '連江縣', '金門縣', '澎湖縣'];
+
+
+        fetch(url)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+
+                let locations = data['records']['location'];
+                let weatherData = {};
+                locations.forEach(function (location) {
+                    weatherData[location['locationName']] = {};
+                    let weatherElements = location['weatherElement'];
+                    let wxValue = Number(weatherElements[0]['time'][0]['parameter']['parameterValue']);
+                    let wx = weatherElements[0]['time'][0]['parameter']['parameterName'];
+                    weatherElements.forEach(function (weatherElement) {
+                        weatherData[location['locationName']][weatherElement['elementName']] = weatherElement['time'][0]['parameter']['parameterName'];
+                        weatherData[location['locationName']][wx] = wxValue;
+
+                    });
+                    console.log(weatherData);
+                });
+
+
+
+                const containerElement = document.querySelector('.container');
+                let cards = '';
+
+                countries.forEach(function (country) {
+                    let sunnyIcon = '<svg class="sunny" viewbox="15 15 70 70"><animateTransform dur="10s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,0,0"to="360,0,0" /><rect class="sunny-1" ; width="40" height="40" x="30" y="30" rx="2" ></rect><rect width="40" height="40" x="30" y="30" rx="2"></rect><circle id="sun" cx="50" cy="50" r="20"></circle></svg>';
+                    let cloudysunIcon = '<svg class="cloudy_sunny" viewbox="0 -5 100 100"><circle id="sun" cx="60" cy="40" r="15"><animateTransform dur="5s" attributeName="transform" repeatCount="indefinite" type="rotate" from="0,60,40"to="360,60,40" /></circle><g id="cloud"><circle cx="32" cy="35" r="15"></circle><circle cx="50" cy="40" r="14"></circle><rect width="70" height="30" x="5" y="35" rx="15"></rect><animateTransform attributeName="transform" type="translate" values="-5,10;10,10;-5,10" dur="2s"repeatCount="indefinite" /></g></svg>';
+                    let cloudyIcon = '<svg class="cloudy" viewbox="0 0 100 100"><g id="cloud"><circle cx="30" cy="50" r="15"></circle><circle cx="50" cy="50" r="20"></circle><circle cx="70" cy="55" r="15"></circle><circle cx="80" cy="55" r="10"></circle><animateTransform attributeName="transform" type="translate" values="10,0;-5,0;10,0" dur="2s"repeatCount="indefinite" /></g><g id="cloud2"><circle cx="30" cy="50" r="15"></circle><circle cx="50" cy="50" r="20"></circle><circle cx="70" cy="55" r="15"></circle><circle cx="80" cy="55" r="10"></circle><animateTransform attributeName="transform" type="translate" values="-5,20;10,20;-5,20" dur="2s"repeatCount="indefinite" /></g><animateTransform attributeName="transform" dur="0.1s" type="scale" values="1.5"/></svg>';
+                    let overcastIcon = '<svg class="overcast" viewbox="0 0 100 100"><g id="overcast_cloud"><circle cx="30" cy="50" r="15"></circle><circle cx="50" cy="50" r="20"></circle><circle cx="70" cy="55" r="15"></circle><circle cx="80" cy="55" r="10"></circle><animateTransform attributeName="transform" type="translate" values="10,0;-5,0;10,0" dur="2s"repeatCount="indefinite" /></g><g id="overcast_cloud2"><circle cx="30" cy="50" r="15"></circle><circle cx="50" cy="50" r="20"></circle><circle cx="70" cy="55" r="15"></circle><circle cx="80" cy="55" r="10"></circle><animateTransform attributeName="transform" type="translate" values="-5,20;10,20;-5,20" dur="2s"repeatCount="indefinite" /></g></svg>';
+                    let rainyIcon = '<svg class="rainy" viewbox="0 10 100 100"><g id="rain"><rect width="2" height="7" x="45" y="60" rx="1"><animateTransform dur="1.5s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,10,50;30,-150,-20" /></rect><rect width="2" height="7" x="60" y="60" rx="1"><animateTransform dur="1.8s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,50;30,-150,-20" /></rect><rect width="2" height="7" x="75" y="55" rx="1"><animateTransform dur="1.3s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,60;30,-150,-20" /></rect><rect width="2" height="7" x="65" y="45" rx="1"><animateTransform dur="1.2s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,60;30,-150,-20" /></rect><animateTransform link attributeName="transform" type="translate" values="-5,-5;10,0;-5,-5" dur="5s"repeatCount="indefinite" /></g><g id="overcast_cloud"><circle cx="30" cy="50" r="15"></circle><circle cx="50" cy="50" r="20"></circle><circle cx="70" cy="55" r="15"></circle><circle cx="80" cy="55" r="10"></circle><animateTransform attributeName="transform" type="translate" values="10,0;-5,0;10,0" dur="2s"repeatCount="indefinite" /></g><g id="overcast_cloud2"><circle cx="30" cy="50" r="20"></circle><circle cx="50" cy="50" r="25"></circle><circle cx="70" cy="55" r="20"></circle><circle cx="80" cy="55" r="15"></circle><animateTransform attributeName="transform" type="translate" values="-5,15;5,15;-5,15" dur="2s"repeatCount="indefinite" /></g></svg>';
+                    let thunderIcon = '<svg class="rainy_thunder" viewbox="0 10 100 100"><g id="rain"><rect width="2" height="7" x="45" y="60" rx="1"><animateTransform dur="0.6s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,10,50;30,-150,-20" /></rect><rect width="2" height="7" x="60" y="60" rx="1"><animateTransform dur="0.8s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,50;30,-150,-20" /></rect><rect width="2" height="7" x="75" y="55" rx="1"><animateTransform dur="0.7s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,60;30,-150,-20" /></rect><rect width="2" height="7" x="65" y="45" rx="1"><animateTransform dur="0.5s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,60;30,-150,-20" /></rect><animateTransform link attributeName="transform" type="translate" values="-5,-5;10,0;-5,-5" dur="2s"repeatCount="indefinite" /></g><g><polyline id="thunder" points="50,38 46,50 52,50 50,60 56,47 50,47 50,38"><animateTransform dur="2.5s" attributeName="transform" repeatCount="indefinite" type="rotate"values="30,50,60;30,-150,-20" /></polyline><polyline id="thunder" points="50,38 46,50 52,50 50,60 56,47 50,47 50,38"><animateTransform dur="3s" attributeName="transform" repeatCount="indefinite" type="rotate"values="10,60,100;-100,200,10" /></polyline></g><g id="overcast_cloud"><circle cx="30" cy="50" r="15"></circle><circle cx="50" cy="50" r="20"></circle><circle cx="70" cy="55" r="15"></circle><circle cx="80" cy="55" r="10"></circle><animateTransform attributeName="transform" type="translate" values="10,0;-5,0;10,0" dur="2s"repeatCount="indefinite" /></g><g id="overcast_cloud2"><circle cx="30" cy="50" r="20"></circle><circle cx="50" cy="50" r="25"></circle><circle cx="70" cy="55" r="20"></circle><circle cx="80" cy="55" r="15"></circle><animateTransform attributeName="transform" type="translate" values="-5,15;5,15;-5,15" dur="2s"repeatCount="indefinite" /></g></svg>';
+                    let wxValue = weatherData[country]['Wx'];
+                    console.log(wxValue);
+                    let image = '';
+                    if (wxValue === '晴') {
+                        image = sunnyIcon;
+                    } else if (wxValue === '晴時多雲') {
+                        image = cloudysunIcon;
+                    } else if (wxValue === '多雲') {
+                        image = cloudyIcon;
+                    } else if (wxValue === '多雲時陰') {
+                        image = overcastIcon;
+                    } else if (wxValue === '陰短暫雨') {
+                        image = rainyIcon;
+                    } else {
+                        image = thunderIcon;
+                    };
+                    cards += `
+                    <div class="card">
+                        <div class="img">${image}</div>
+                        <div class="locationName">${country}</div>
+                        <div class="weatherName">${weatherData[country]['Wx']}</div>
+                        <div class="rainProbability">降雨機率：${weatherData[country]['PoP']}%</div>
+                        <div class="lowestTemperature">最低溫：${weatherData[country]['MinT']}℃</div>
+                        <div class="highestTemperature">最高溫：${weatherData[country]['MaxT']}℃</div>
+                        <div class="highest">舒適度：${weatherData[country]['CI']}</div>
+                    </div>`;
+                });
+                containerElement.innerHTML = cards;
+            });
+    </script>
+</body>
+
+</html>
