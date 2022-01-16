@@ -1,0 +1,29 @@
+#shopping-cart {
+	background-color: #D1D5DB;
+
+	.card {
+		background-color: #F3F4F6;
+
+		.progress-block {
+			.step {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: white;
+                color: black;
+
+                &.active {
+					color: #fff;
+				}
+            }
+            .progress {
+                top: 15px;
+				right: 0;
+				transform: translateX(50%);
+				width: 80%;
+				height: 10px;
+                border-radius: 10px;
+            }
+		}
+	}
+}
