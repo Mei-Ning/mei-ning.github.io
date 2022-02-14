@@ -13,6 +13,12 @@
 
 ## 作品集
 
+### 個人專題 / 小美冰淇淋網站改版
+
+* 設計、動畫、flex排版
+* Demo網站連結(如下)
+  * https://mei-ning.github.io/shaomei/shaomei
+
 ### RWD / microsoft仿切
 
 * RWD(電腦、平板及手機板)、flex排版
