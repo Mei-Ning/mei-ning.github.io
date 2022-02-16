@@ -263,7 +263,7 @@ body main #concept .img-1 {
   height: 396.5px;
   border-radius: 50%;
   position: absolute;
-  top: 630px;
+  top: 660px;
   left: calc(50% + 294px);
   z-index: 5;
 }
@@ -277,7 +277,7 @@ body main #concept .img-2 {
   height: 250px;
   border-radius: 50%;
   position: absolute;
-  top: 980px;
+  bottom: 0;
   right: calc(50% + 250px);
   z-index: 5;
 }
@@ -306,7 +306,7 @@ body main #concept .title {
   letter-spacing: 0.66rem;
   line-height: 1.7;
   position: absolute;
-  top: 330px;
+  top: 300px;
   left: calc(50% - 52px);
   color: #f5f8fc;
   z-index: 10;
@@ -317,7 +317,7 @@ body main #concept .title-bg {
   height: 400px;
   border-radius: 50%;
   position: absolute;
-  top: 230px;
+  top: 200px;
   left: calc(50% - 210px);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -333,7 +333,7 @@ body main #concept .text {
   text-align: center;
   line-height: 2.4;
   position: absolute;
-  top: 615px;
+  bottom: 100px;
   left: calc(50% - 230px);
   color: #292929;
   z-index: 10;
@@ -344,7 +344,7 @@ body main #concept .text-bg {
   height: 600px;
   border-radius: 50%;
   position: absolute;
-  top: 530px;
+  bottom: 25px;
   left: calc(50% - 380px);
   -webkit-transform: rotate(-5deg);
           transform: rotate(-5deg);
@@ -1645,4 +1645,4 @@ body #footer .page-top .shape .arrow {
           transform-origin: top left;
   color: #292929;
 }
-/*# sourceMappingURL=littlemei.css.map */
+/*# sourceMappingURL=shaomei.css.map */
