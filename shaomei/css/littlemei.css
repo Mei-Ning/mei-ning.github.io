@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f5f8fc;
+  background-color: #fff;
   overflow-y: scroll;
 }
 
@@ -94,6 +94,7 @@ body #header .container .trigger-bg {
 body main #index {
   position: relative;
   width: 100%;
+  background-color: #f5f8fc;
 }
 
 body main #index .background {
@@ -237,9 +238,8 @@ body main #index .sidebar a .fab {
 body main #concept {
   position: relative;
   width: 100%;
-  height: 1200px;
-  margin-top: 180px;
-  margin-bottom: 80px;
+  height: 1300px;
+  background-color: #f5f8fc;
 }
 
 body main #concept .bg {
@@ -249,7 +249,7 @@ body main #concept .bg {
   width: 100%;
   height: 875px;
   position: absolute;
-  top: 100px;
+  top: 280px;
   left: 0;
   z-index: 0;
 }
@@ -263,7 +263,7 @@ body main #concept .img-1 {
   height: 396.5px;
   border-radius: 50%;
   position: absolute;
-  top: 450px;
+  top: 630px;
   left: calc(50% + 294px);
   z-index: 5;
 }
@@ -277,7 +277,7 @@ body main #concept .img-2 {
   height: 250px;
   border-radius: 50%;
   position: absolute;
-  top: 800px;
+  top: 980px;
   right: calc(50% + 250px);
   z-index: 5;
 }
@@ -291,7 +291,7 @@ body main #concept .img-3 {
   height: 408px;
   border-radius: 50%;
   position: absolute;
-  top: 200px;
+  top: 380px;
   right: calc(50% + 300px);
   z-index: 5;
 }
@@ -302,10 +302,11 @@ body main #concept .title {
           writing-mode: vertical-rl;
   font-size: 32px;
   font-weight: 700;
+  font-family: '台灣圓體';
   letter-spacing: 0.66rem;
   line-height: 1.7;
   position: absolute;
-  top: 150px;
+  top: 330px;
   left: calc(50% - 52px);
   color: #f5f8fc;
   z-index: 10;
@@ -316,7 +317,7 @@ body main #concept .title-bg {
   height: 400px;
   border-radius: 50%;
   position: absolute;
-  top: 50px;
+  top: 230px;
   left: calc(50% - 210px);
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -328,12 +329,12 @@ body main #concept .text {
   width: 500px;
   font-size: 18px;
   font-weight: 500;
+  font-family: '台灣圓體';
   text-align: center;
   line-height: 2.4;
   position: absolute;
-  top: 600px;
+  top: 615px;
   left: calc(50% - 230px);
-  font-family: "微軟正黑體";
   color: #292929;
   z-index: 10;
 }
@@ -351,175 +352,13 @@ body main #concept .text-bg {
   z-index: 3;
 }
 
-body main #news {
-  position: relative;
-  width: 1176px;
-  margin: 0 auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-body main #news .title {
-  font-size: 60px;
-  font-weight: 700;
-  font-family: sans-serif;
-  letter-spacing: 0.48rem;
-  text-align: center;
-}
-
-body main #news .title span {
-  display: inline-block;
-}
-
-body main #news .title .red {
-  color: #e60014;
-  padding: 0.48rem;
-}
-
-body main #news .title .blue {
-  color: #003ca0;
-}
-
-body main #news .news-list {
-  margin-top: 70px;
-  margin-bottom: 100px;
-}
-
-body main #news .news-list::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-body main #news .news-list .news-item {
-  width: 352px;
-  float: left;
-  margin-left: 60px;
-  text-decoration: none;
-  color: #292929;
-  cursor: pointer;
-}
-
-body main #news .news-list .news-item .img {
-  width: 100%;
-  height: 264px;
-  background-size: cover;
-}
-
-body main #news .news-list .news-item .img-1 {
-  background-image: url(../img/news-img1.jfif);
-}
-
-body main #news .news-list .news-item .img-2 {
-  background-image: url(../img/news-img2.jfif);
-}
-
-body main #news .news-list .news-item .img-3 {
-  background-image: url(../img/news-img3.jfif);
-}
-
-body main #news .news-list .news-item .title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 2;
-  margin-top: 20px;
-  text-align: justify;
-}
-
-body main #news .news-list .news-item .text {
-  font-size: 14px;
-  line-height: 2;
-  margin-top: 10px;
-  text-align: justify;
-}
-
-body main #news .news-list .news-item:first-child {
-  margin-left: 0;
-}
-
-body main #news .news-btn {
-  text-decoration: none;
-  position: relative;
-  width: 260px;
-  height: 60px;
-  margin: 60px auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body main #news .news-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffd648;
-  z-index: 1;
-}
-
-body main #news .news-btn .text {
-  position: relative;
-  font-size: 15px;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 0.12rem;
-  color: #292929;
-  z-index: 3;
-}
-
-body main #news .news-btn .arrow {
-  display: block;
-  width: 24px;
-  height: 6px;
-  position: absolute;
-  top: auto;
-  right: 16px;
-  z-index: 10;
-}
-
-body main #news .news-btn .arrow::before {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
-  width: 10px;
-  height: 1px;
-  background-color: #292929;
-  z-index: 1;
-}
-
-body main #news .news-btn .arrow::after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 24px;
-  height: 1px;
-  background-color: #292929;
-  z-index: 1;
-}
-
 body main #products {
   position: relative;
-  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 230px;
+  padding: 280px 240px 230px;
+  background-color: #f5f8fc;
+  overflow: hidden;
 }
 
 body main #products .title {
@@ -541,15 +380,15 @@ body main #products .title .blue {
 }
 
 body main #products .title-bg {
-  width: 800px;
-  height: 700px;
+  width: 900px;
+  height: 885px;
   position: absolute;
-  top: -100px;
-  left: -150px;
+  top: 0;
+  left: -50px;
   background-image: url(../img/products-title-bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0;
+  background-size: contain;
+  z-index: 1;
 }
 
 body main #products .products-list {
@@ -575,6 +414,7 @@ body main #products .products-list .products-item {
   padding: 25px;
   border-radius: 230px 230px 20px 20px;
   text-decoration: none;
+  z-index: 10;
 }
 
 body main #products .products-list .products-item:first-child {
@@ -629,6 +469,7 @@ body main #products .products-list .products-item .img-4 {
 body main #products .products-list .products-item .item-title {
   font-size: 28px;
   font-weight: 600;
+  font-family: '台灣圓體';
   line-height: 26px;
   text-align: center;
   margin-bottom: 35px;
@@ -636,6 +477,7 @@ body main #products .products-list .products-item .item-title {
 
 body main #products .products-list .products-item .item-text {
   font-size: 18px;
+  font-family: '台灣圓體';
   line-height: 2;
 }
 
@@ -648,7 +490,7 @@ body main #products .products-list-bg {
   background-image: url(../img/products-list-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
 }
 
 body main #products .ball-1 {
@@ -659,9 +501,8 @@ body main #products .ball-1 {
           transform: rotate(50deg);
   position: absolute;
   bottom: 230px;
-  left: -50px;
+  left: 50px;
   background-color: #fff;
-  z-index: -1;
 }
 
 body main #products .ball-2 {
@@ -674,7 +515,6 @@ body main #products .ball-2 {
   top: 830px;
   right: calc(50% - 350px);
   background-color: #fff;
-  z-index: -1;
 }
 
 body main #products .ball-3 {
@@ -684,23 +524,24 @@ body main #products .ball-3 {
   -webkit-transform: rotate(70deg);
           transform: rotate(70deg);
   position: absolute;
-  top: 150px;
-  right: -100px;
+  top: 120px;
+  right: 120px;
   background-color: #fff;
-  z-index: -1;
 }
 
 body main #history {
   position: relative;
-  padding-top: 250px;
-  padding-bottom: 440px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #003ca0;
   z-index: 10;
+  overflow: hidden;
 }
 
 body main #history .inner {
   position: relative;
   width: 1096px;
-  height: 875px;
+  height: 950px;
   margin: 0 auto;
   z-index: 10;
 }
@@ -762,19 +603,21 @@ body main #history .inner .title {
 }
 
 body main #history .inner .title .num {
-  font-size: 160px;
+  font-size: 120px;
   font-weight: 400;
+  font-family: sans-serif;
   padding-top: 70px;
   line-height: 1;
   color: #ffd648;
 }
 
 body main #history .inner .title .text {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
+  font-family: '台灣圓體';
   margin-top: 20px;
-  line-height: 1.25;
-  color: #003ca0;
+  line-height: 1.5;
+  color: #ffd648;
 }
 
 body main #history .inner .imgs {
@@ -790,7 +633,7 @@ body main #history .inner .imgs {
 
 body main #history .inner .btn-prev {
   text-decoration: none;
-  color: #003ca0;
+  color: #e60014;
   width: 85px;
   height: 85px;
   position: absolute;
@@ -809,8 +652,9 @@ body main #history .inner .btn-prev {
 }
 
 body main #history .inner .btn-prev .text {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
   letter-spacing: 0.2rem;
 }
 
@@ -821,7 +665,7 @@ body main #history .inner .btn-prev .text::after {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #003ca0;
+  border: 2px solid #e60014;
   border-radius: 50%;
 }
 
@@ -834,8 +678,8 @@ body main #history .inner .btn-prev .arrow::before {
   content: "";
   display: block;
   width: 30px;
-  height: 1px;
-  background-color: #003ca0;
+  height: 2px;
+  background-color: #e60014;
 }
 
 body main #history .inner .btn-prev .arrow::after {
@@ -848,13 +692,13 @@ body main #history .inner .btn-prev .arrow::after {
   -webkit-transform-origin: left;
           transform-origin: left;
   width: 12px;
-  height: 1px;
-  background-color: #003ca0;
+  height: 2px;
+  background-color: #e60014;
 }
 
 body main #history .inner .btn-next {
   text-decoration: none;
-  color: #003ca0;
+  color: #e60014;
   width: 85px;
   height: 85px;
   position: absolute;
@@ -873,8 +717,9 @@ body main #history .inner .btn-next {
 }
 
 body main #history .inner .btn-next .text {
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
   letter-spacing: 0.2rem;
 }
 
@@ -885,7 +730,7 @@ body main #history .inner .btn-next .text::after {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #003ca0;
+  border: 2px solid #e60014;
   border-radius: 50%;
 }
 
@@ -898,8 +743,8 @@ body main #history .inner .btn-next .arrow::before {
   content: "";
   display: block;
   width: 30px;
-  height: 1px;
-  background-color: #003ca0;
+  height: 2px;
+  background-color: #e60014;
 }
 
 body main #history .inner .btn-next .arrow::after {
@@ -912,8 +757,8 @@ body main #history .inner .btn-next .arrow::after {
   -webkit-transform-origin: right;
           transform-origin: right;
   width: 12px;
-  height: 1px;
-  background-color: #003ca0;
+  height: 2px;
+  background-color: #e60014;
 }
 
 body main #history .inner .pager {
@@ -922,7 +767,8 @@ body main #history .inner .pager {
   position: absolute;
   bottom: 4px;
   left: 490px;
-  color: #003ca0;
+  color: #e60014;
+  font-family: sans-serif;
 }
 
 body main #history .inner .pager .page {
@@ -935,17 +781,17 @@ body main #history .inner .pager .page {
 
 body main #history .inner .pager .hr {
   width: 25px;
-  height: 1px;
+  height: 2px;
   position: absolute;
   top: 28px;
   right: 10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  background-color: #003ca0;
+  background-color: #e60014;
 }
 
 body main #history .inner .pager .total {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   position: absolute;
   top: 0;
@@ -953,8 +799,10 @@ body main #history .inner .pager .total {
 }
 
 body main #main-video {
-  padding-top: 80px;
+  position: relative;
+  padding-top: 300px;
   padding-bottom: 120px;
+  background-color: #ffd648;
 }
 
 body main #main-video .title-en {
@@ -962,16 +810,31 @@ body main #main-video .title-en {
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.5rem;
-  text-align: center;
+  font-family: sans-serif;
+  position: absolute;
+  top: 250px;
+  left: calc(50% - 100px);
+  z-index: 10;
+}
+
+body main #main-video .title-en .red {
+  padding: 5px;
+  color: #e60014;
+}
+
+body main #main-video .title-en .blue {
+  color: #003ca0;
 }
 
 body main #main-video .title-tw {
   font-size: 17px;
   font-weight: 500;
+  font-family: '台灣圓體';
   line-height: 1;
   letter-spacing: 0.2rem;
   margin-top: 18px;
   text-align: center;
+  color: #4d4d4d;
 }
 
 body main #main-video .video {
@@ -989,7 +852,7 @@ body main #main-video .video .img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  z-index: 1;
+  z-index: 3;
 }
 
 body main #main-video .video .cover-top {
@@ -999,7 +862,7 @@ body main #main-video .video .cover-top {
   top: 0;
   left: 0;
   background-color: #e60014;
-  z-index: 10;
+  z-index: 5;
 }
 
 body main #main-video .video .cover-bottom {
@@ -1009,7 +872,7 @@ body main #main-video .video .cover-bottom {
   bottom: 0;
   left: 0;
   background-color: #e60014;
-  z-index: 10;
+  z-index: 5;
 }
 
 body main #main-video .video .btn {
@@ -1060,27 +923,56 @@ body main #main-video .video .btn-typo {
   }
 }
 
+body main #main-video .ball {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  top: -200px;
+  left: calc(50% - 420px);
+  background-color: #f9bb1e;
+  z-index: 0;
+}
+
 body main #movies {
-  padding-top: 80px;
+  position: relative;
+  padding-top: 150px;
   padding-bottom: 200px;
   width: 100%;
+  background-color: #ffd648;
 }
 
 body main #movies .title-en {
+  position: absolute;
+  top: 80px;
+  left: calc(50% - 160px);
   font-size: 48px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.5rem;
+  font-family: sans-serif;
   text-align: center;
+  z-index: 5;
+}
+
+body main #movies .title-en .red {
+  padding: 5px;
+  color: #e60014;
+}
+
+body main #movies .title-en .blue {
+  color: #003ca0;
 }
 
 body main #movies .title-tw {
   font-size: 17px;
   font-weight: 500;
+  font-family: '台灣圓體';
   line-height: 1;
   letter-spacing: 0.2rem;
   margin-top: 18px;
   text-align: center;
+  color: #4d4d4d;
 }
 
 body main #movies .movies-list {
@@ -1174,34 +1066,276 @@ body main #movies .movies-list .movie-item .movie .btn {
 
 body main #movies .movies-list .movie-item .title {
   font-size: 24px;
+  font-family: '台灣圓體';
   margin-top: 34px;
   text-align: justify;
   line-height: 1.75;
 }
 
-body main #business {
-  width: 912px;
-  margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 70px;
+body main #movies .title-bg {
+  background-image: url(../img/movie-title-bg.svg);
+  background-repeat: repeat-x;
+  background-position: top right;
+  width: 100%;
+  height: 875px;
+  position: absolute;
+  top: -68px;
+  left: 0;
+  z-index: 0;
 }
 
-body main #business .title {
+body main #news {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 150px 372px 250px;
+  background-color: #4d4d4d;
+}
+
+body main #news .title {
   font-size: 60px;
   font-weight: 700;
+  font-family: sans-serif;
   letter-spacing: 0.48rem;
   text-align: center;
 }
 
-body main #business .text {
-  font-size: 16px;
+body main #news .title span {
+  display: inline-block;
+}
+
+body main #news .title .yellow {
+  color: #ffd648;
+  padding: 0.48rem;
+}
+
+body main #news .title .white {
+  color: #f5f8fc;
+}
+
+body main #news .news-list {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+body main #news .news-list::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body main #news .news-list .news-item {
+  width: 352px;
+  float: left;
+  margin-left: 60px;
+  text-decoration: none;
+  color: #292929;
+  cursor: pointer;
+}
+
+body main #news .news-list .news-item .img {
+  width: 100%;
+  height: 264px;
+  background-size: cover;
+}
+
+body main #news .news-list .news-item .img-1 {
+  background-image: url(../img/news-img1.jfif);
+}
+
+body main #news .news-list .news-item .img-2 {
+  background-image: url(../img/news-img2.jfif);
+}
+
+body main #news .news-list .news-item .img-3 {
+  background-image: url(../img/news-img3.jfif);
+}
+
+body main #news .news-list .news-item .title {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: '台灣圓體';
   line-height: 2;
-  margin-top: 66px;
+  margin-top: 20px;
+  text-align: justify;
+  color: #f5f8fc;
+}
+
+body main #news .news-list .news-item .text {
+  font-size: 14px;
+  font-family: '台灣圓體';
+  line-height: 2;
+  margin-top: 10px;
+  text-align: justify;
+  color: #f5f8fc;
+}
+
+body main #news .news-list .news-item:first-child {
+  margin-left: 0;
+}
+
+body main #news .news-btn {
+  text-decoration: none;
+  position: relative;
+  width: 260px;
+  height: 60px;
+  margin: 60px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #news .news-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e60014;
+  z-index: 1;
+}
+
+body main #news .news-btn .text {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
   text-align: center;
+  letter-spacing: 0.12rem;
+  font-family: sans-serif;
+  color: #f5f8fc;
+  z-index: 3;
+}
+
+body main #news .news-btn .arrow {
+  display: block;
+  width: 24px;
+  height: 6px;
+  position: absolute;
+  top: auto;
+  right: 16px;
+  z-index: 10;
+}
+
+body main #news .news-btn .arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  width: 10px;
+  height: 1px;
+  background-color: #f5f8fc;
+  z-index: 1;
+}
+
+body main #news .news-btn .arrow::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 1px;
+  background-color: #f5f8fc;
+  z-index: 1;
+}
+
+body main #news .left-bg {
+  width: 400px;
+  height: 950px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/news-left-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #news .right-bg {
+  width: 490px;
+  height: 800px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-image: url(../img/news-right-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #news .bottom-bg {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url(../img/news-bottom-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main #business {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 300px 400px 70px;
+  background-color: #fff;
+}
+
+body main #business .title {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 0.48rem;
+  z-index: 5;
+}
+
+body main #business .title .red {
+  padding: 5px;
+  color: #e60014;
+}
+
+body main #business .title .blue {
+  color: #003ca0;
+}
+
+body main #business .title-bg {
+  width: 1450px;
+  height: 1600px;
+  position: absolute;
+  top: -90px;
+  left: 0;
+  background-image: url(../img/business-title-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #business .text {
+  position: absolute;
+  top: 360px;
+  left: 310px;
+  font-size: 18px;
+  font-family: '台灣圓體';
+  line-height: 2;
+  z-index: 5;
 }
 
 body main #business .business-list {
-  margin-top: 116px;
+  margin-top: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,25 +1347,26 @@ body main #business .business-list {
 body main #business .business-list .corporate, body main #business .business-list .contact {
   text-decoration: none;
   width: 50%;
-  height: 386px;
+  height: 500px;
   position: relative;
 }
 
-body main #business .business-list .corporate .title, body main #business .business-list .contact .title {
-  font-size: 20px;
+body main #business .business-list .corporate .title-1, body main #business .business-list .corporate .title-2, body main #business .business-list .contact .title-1, body main #business .business-list .contact .title-2 {
+  font-size: 30px;
   letter-spacing: 0.42rem;
-  padding-top: 180px;
+  padding-top: 230px;
+  text-align: center;
 }
 
-body main #business .business-list .corporate .tag, body main #business .business-list .contact .tag {
-  font-size: 40px;
+body main #business .business-list .corporate .tag-1, body main #business .business-list .corporate .tag-2, body main #business .business-list .contact .tag-1, body main #business .business-list .contact .tag-2 {
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 0.3rem;
   position: absolute;
-  bottom: -6px;
+  bottom: -8px;
 }
 
-body main #business .business-list .corporate .arrow, body main #business .business-list .contact .arrow {
+body main #business .business-list .corporate .arrow-1, body main #business .business-list .corporate .arrow-2, body main #business .business-list .contact .arrow-1, body main #business .business-list .contact .arrow-2 {
   width: 55px;
   height: 18px;
   position: absolute;
@@ -1239,7 +1374,7 @@ body main #business .business-list .corporate .arrow, body main #business .busin
   right: 32px;
 }
 
-body main #business .business-list .corporate .arrow::before, body main #business .business-list .contact .arrow::before {
+body main #business .business-list .corporate .arrow-1::before, body main #business .business-list .corporate .arrow-2::before, body main #business .business-list .contact .arrow-1::before, body main #business .business-list .contact .arrow-2::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1250,10 +1385,9 @@ body main #business .business-list .corporate .arrow::before, body main #busines
           transform: rotate(45deg);
   -webkit-transform-origin: top right;
           transform-origin: top right;
-  background-color: #003ca0;
 }
 
-body main #business .business-list .corporate .arrow::after, body main #business .business-list .contact .arrow::after {
+body main #business .business-list .corporate .arrow-1::after, body main #business .business-list .corporate .arrow-2::after, body main #business .business-list .contact .arrow-1::after, body main #business .business-list .contact .arrow-2::after {
   content: "";
   position: absolute;
   right: 0;
@@ -1264,37 +1398,58 @@ body main #business .business-list .corporate .arrow::after, body main #business
           transform: rotate(0);
   -webkit-transform-origin: top right;
           transform-origin: top right;
-  background-color: #003ca0;
 }
 
 body main #business .business-list .corporate {
   background-color: #e60014;
-  color: #ffd648;
+  color: #fff;
+  font-family: '台灣圓體';
 }
 
-body main #business .business-list .corporate .tag {
-  left: 50px;
+body main #business .business-list .corporate .tag-1 {
+  left: 70px;
+  font-family: sans-serif;
+}
+
+body main #business .business-list .corporate .arrow-1::before {
+  background-color: #fff;
+}
+
+body main #business .business-list .corporate .arrow-1::after {
+  background-color: #fff;
 }
 
 body main #business .business-list .contact {
   background-color: #ffd648;
-  color: #e60014;
-  top: 50px;
+  color: #4d4d4d;
+  top: 100px;
+  font-family: '台灣圓體';
 }
 
-body main #business .business-list .contact .tag {
-  left: 120px;
+body main #business .business-list .contact .tag-2 {
+  left: 150px;
+  font-family: sans-serif;
+}
+
+body main #business .business-list .contact .arrow-2::before {
+  background-color: #4d4d4d;
+}
+
+body main #business .business-list .contact .arrow-2::after {
+  background-color: #4d4d4d;
 }
 
 body main #company {
-  width: 672px;
-  padding-top: 110px;
-  padding-bottom: 400px;
+  position: relative;
+  width: 1920px;
+  padding: 180px 624px 450px;
   margin: 0 auto;
 }
 
 body main #company table {
-  font-size: 18px;
+  font-size: 24px;
+  font-family: '台灣圓體';
+  color: #4d4d4d;
   line-height: 1.75;
   border-spacing: 0 54px;
   border-collapse: separate;
@@ -1311,6 +1466,17 @@ body main #company table td {
   vertical-align: top;
   font-weight: 400;
   text-align: left;
+}
+
+body main #company .bottom-bg {
+  width: 362px;
+  height: 492px;
+  position: absolute;
+  bottom: 300px;
+  right: 0;
+  background-image: url(../img/business-bottom-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 body #footer {
@@ -1350,7 +1516,7 @@ body #footer .inner .sns a {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  color: #292929;
+  color: #ffd648;
 }
 
 body #footer .inner .sns a span {
@@ -1368,7 +1534,7 @@ body #footer .inner .sns a .fb::before {
   position: absolute;
   top: -2px;
   left: -0.5px;
-  border: 1px solid #292929;
+  border: 1px solid #ffd648;
   border-radius: 50%;
 }
 
@@ -1379,7 +1545,7 @@ body #footer .inner .sns a .ig::before {
   position: absolute;
   top: -2px;
   left: 54.5px;
-  border: 1px solid #292929;
+  border: 1px solid #ffd648;
   border-radius: 50%;
 }
 
@@ -1390,7 +1556,7 @@ body #footer .inner .sns a .yt::before {
   position: absolute;
   top: -2px;
   left: 109.5px;
-  border: 1px solid #292929;
+  border: 1px solid #ffd648;
   border-radius: 50%;
 }
 
@@ -1412,13 +1578,14 @@ body #footer .inner .nav a {
   font-size: 16px;
   letter-spacing: 0.12rem;
   padding: 8px 0;
-  color: #292929;
+  color: #ffd648;
   margin-left: 27px;
 }
 
 body #footer .copyright {
   font-size: 12px;
   font-weight: 700;
+  color: #e60014;
   text-align: center;
   width: 100%;
   position: absolute;
@@ -1435,6 +1602,8 @@ body #footer .bg-wave {
   left: 0;
   background-image: url(../img/footer-wave.svg);
   background-position: calc(50% - 230px) 0;
+  background-repeat: repeat-x;
+  background-size: cover;
   z-index: 1;
 }
 
