@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色弱測試</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-color:  rgb(240, 96, 96);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 10px;
+        }
+        .box {
+            width: 50%;
+            height: 50%;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+            background-color: blueviolet;
+        }
+        .box.active {
+            opacity: calc(1 - 1/ var(--level));
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+        let level = 2;
+        const containerElement = document.querySelector('.container');
+        
+        function createBox() {
+            let boxQty = level**2;
+            let answer = Math.floor(Math.random()*boxQty);
+            let boxes = '';
+
+            let r = Math.floor(Math.random()*200);
+            let g = Math.floor(Math.random()*200);
+            let b = Math.floor(Math.random()*200);
+            let length = Math.floor(1/level*1000)/10;
+            let style = `style="background-color:rgb(${r},${g},${b}); width:${length}%; height:${length}%; --level:${level}"`;
+             for(let i = 0 ; i < boxQty ; i++){
+                if(i == answer){
+                    boxes += `<div class="box active" ${style}></div>`;
+                }else{
+                    boxes += `<div class="box" ${style}></div>`;
+                }
+            }
+            containerElement.innerHTML = boxes;
+        }
+        function answerSetting() {
+            const answerElement = document.querySelector('.box.active');
+            answerElement.addEventListener('click',function () {
+                if(level < 8){
+                    level += 1;
+                }
+                updateContainer();
+            });
+        }
+        function updateContainer() {
+            createBox();
+            answerSetting();
+        }
+        function initGame() {
+            level = 2;
+            updateContainer();
+        }
+        initGame();
+    
+        
+    </script>
+</body>
+</html>

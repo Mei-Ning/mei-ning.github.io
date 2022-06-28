@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寶可夢對戰</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+        }
+        .container{
+            width: 100%;
+            height: 500px;
+            position: relative;
+            background-image: url(./img/寶可夢對戰底圖.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h2 {
+            padding: 20px;
+        }
+        img {
+            width: 250px;
+            height: 250px;
+        }
+        #ai-pokemon {
+            position: absolute;
+            top: 30%;
+            right: 22%;
+        }
+        #player-pokemon {
+            position: absolute;
+            top: 40%;
+            left: 22%;
+            transform: rotateY(180deg);
+        }
+        .ai {
+            position: absolute;
+            top: 10%;
+            right: 28%;
+            padding: 20px;
+            background: blue;
+            color: #fff;
+            border-radius: 50%;
+        }
+        .player {
+            position: absolute;
+            top: 10%;
+            left: 28%;
+            padding: 20px;
+            background: red;
+            color: #fff;
+            border-radius: 50%;
+        }
+        #result {
+            position: absolute;
+            top: 50%;
+            left: 42%;
+            padding: 20px;
+            font-size: 40px;
+            background: yellow;
+            color: black;
+        }
+        .img {
+            width: 150px;
+            height: 150px;
+        }
+        .text {
+            color: red;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <span class="ai">電腦</span>
+            <img id="ai-pokemon" src="./img/pokemon1.png" alt="">
+        </div>
+        <div >
+            <span class="player">玩家</span>
+            <img id="player-pokemon" src="./img/pokemon1.png" alt="">
+        </div>
+        <br>
+        <div><span id="result">玩家勝利！</span></div>
+    </div>
+    <hr>
+    <span class="text">請選擇對戰寶可夢~</span>
+    <br>
+    <button class='pokemon pokemon1' data-pokemon="1">
+        <img class="img" src="./img/pokemon1.png" alt="">
+    </button>
+    <button class='pokemon pokemon2' data-pokemon="2">
+        <img class="img" src="./img/pokemon2.png" alt="">
+    </button>
+    <button class='pokemon pokemon3' data-pokemon="3">
+        <img class="img" src="./img/pokemon3.png" alt="">
+    </button>
+    <script>
+        const aiElement = document.querySelector('#ai-pokemon');
+        const playerElement = document.querySelector('#player-pokemon');
+        const resultElement = document.querySelector('#result');
+        const pokemonElements = document.querySelectorAll('.pokemon');
+
+        pokemonElements.forEach(function (pokemonElement) {
+            pokemonElement.addEventListener('click',function () {
+                let player = pokemonElement.getAttribute('data-pokemon');
+                let ai = Math.floor(Math.random()*3)+1;
+                console.log(player,ai);
+                let result = '';
+                if (player == ai) {
+                        result = '平手GOGO';
+                }else if (player == 1 && ai == 2 || player == 2 && ai == 3 || player == 3 && ai == 1) {
+                        result = '電腦獲勝X.X';
+                }else{
+                        result = '玩家獲勝！';
+                };
+                aiElement.setAttribute('src',`./img/pokemon${ai}.png`);
+                playerElement.setAttribute('src',`./img/pokemon${player}.png`);
+                resultElement.textContent = result;
+            });
+        });
+
+    </script>
+</body>
+</html>
